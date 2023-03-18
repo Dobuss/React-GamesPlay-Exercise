@@ -10,6 +10,7 @@ import { Header } from "./components/header/Header";
 import { Home } from "./components/home/Home";
 import { Login } from "./components/login/Login";
 import { Register } from "./components/register/Register";
+import { GameDetails } from "./components/gameDetails/GameDetails";
 
 function App() {
   const navigate = useNavigate();
@@ -38,6 +39,7 @@ function App() {
             <Route path="/register" element={<Register/>} />
             <Route path="/create-game" element={<CreateGame onCreateGameSubmit={onCreateGameSubmit}/>} />
             <Route path="/catalog" element={<Catalog games={games}/>} />
+            <Route path="/catalog/:gameId" element={<GameDetails/>} />
         </Routes>
       </main>
       <Footer/>
